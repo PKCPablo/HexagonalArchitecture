@@ -1,15 +1,19 @@
 package com.example.shop.domain.product;
 
-import java.util.Objects;
+import lombok.NonNull;
+import lombok.Value;
 
-public record ProductName(String value) {
+@Value
+public class ProductName {
 
-    public ProductName {
-        Objects.requireNonNull(value, "'value' must not be null");
+    @NonNull
+    String value;
 
-        if(value.isEmpty()) {
-            throw new IllegalArgumentException("'value' must not be empty");
+    public ProductName(String value) {
+        if (value.length() < 2) {
+            throw new IllegalArgumentException("'name' must be at least two characters long");
         }
-    }
 
+        this.value = value;
+    }
 }

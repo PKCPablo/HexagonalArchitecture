@@ -1,4 +1,4 @@
-package com.example.shop.application.port.out.persistence;
+package com.example.shop.application.ports.output;
 
 import com.example.shop.domain.product.Product;
 import com.example.shop.domain.product.ProductId;
@@ -6,13 +6,13 @@ import com.example.shop.domain.product.ProductId;
 import java.util.List;
 import java.util.Optional;
 
-public interface ProductRepository {
+public interface ProductOutputPort {
 
-    void save(Product product);
+    Product save(Product product);
 
     Optional<Product> findById(ProductId productId);
 
-    List<Product> findByName(String query);
+    Optional<List<Product>> findByName(String name);
 
     List<Product> findAll();
 

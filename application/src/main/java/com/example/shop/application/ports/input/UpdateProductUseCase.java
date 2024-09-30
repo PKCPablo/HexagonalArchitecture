@@ -1,4 +1,4 @@
-package com.example.shop.application.port.in.product;
+package com.example.shop.application.ports.input;
 
 import com.example.shop.domain.product.Product;
 
