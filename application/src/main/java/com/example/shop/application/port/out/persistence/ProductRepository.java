@@ -8,13 +8,13 @@ import java.util.Optional;
 
 public interface ProductRepository {
 
-    void create(Product product);
+    void save(Product product);
 
     Optional<Product> findById(ProductId productId);
 
     List<Product> findByName(String query);
 
-    void update(Product product);
+    List<Product> findAll();
 
     void delete(Product product);
 }

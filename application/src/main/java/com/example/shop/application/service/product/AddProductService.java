@@ -28,6 +28,6 @@ public class AddProductService implements AddProductUseCase {
 
         Product product = new Product(productId, productName, description);
 
-        productRepository.create(product);
+        productRepository.save(product);
     }
 }

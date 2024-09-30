@@ -17,7 +17,7 @@ public class UpdateProductService implements UpdateProductUseCase {
     public void updateProduct(Product product) {
         Objects.requireNonNull(product);
 
-        productRepository.update(product);
+        productRepository.save(product);
 
     }
 }

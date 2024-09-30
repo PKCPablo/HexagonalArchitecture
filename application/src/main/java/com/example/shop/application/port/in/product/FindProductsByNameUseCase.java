@@ -4,6 +4,6 @@ import com.example.shop.domain.product.Product;
 
 import java.util.List;
 
-public interface FindProductsUseCase {
+public interface FindProductsByNameUseCase {
     List<Product> findByName(String query);
 }

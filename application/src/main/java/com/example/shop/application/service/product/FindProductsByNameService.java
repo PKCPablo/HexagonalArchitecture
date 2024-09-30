@@ -1,16 +1,16 @@
 package com.example.shop.application.service.product;
 
-import com.example.shop.application.port.in.product.FindProductsUseCase;
+import com.example.shop.application.port.in.product.FindProductsByNameUseCase;
 import com.example.shop.application.port.out.persistence.ProductRepository;
 import com.example.shop.domain.product.Product;
 
 import java.util.List;
 import java.util.Objects;
 
-public class FindProductsService implements FindProductsUseCase {
+public class FindProductsByNameService implements FindProductsByNameUseCase {
     private final ProductRepository productRepository;
 
-    public FindProductsService(ProductRepository productRepository) {
+    public FindProductsByNameService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 
